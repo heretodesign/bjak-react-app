@@ -8,7 +8,7 @@ const BottomNav = () => {
       <div className="container topNav">
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item" href="https://www.letsumai.com/for-restaurants">
+                <a className="navbar-item" href="https://www.bjak.my/">
                   <span className=" is-size-4">Bjak My Sdn Bhd</span>
                 </a>
 

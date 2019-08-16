@@ -15,9 +15,9 @@ class DetailPage extends React.Component {
   }
 
   componentDidMount () {
-    axios.get(`http://localhost:7000/api/posts/${this.props.match.params.id}`)
+    axios.get(`https://cdn-discover.hooq.tv/v1.2/discover/titles/${this.props.match.params.id}`)
     .then(result => {
-      console.log(result.data)
+      console.log(result.data.images.meta)
       this.setState({
         data: result.data,
         isLoading: false,
@@ -25,30 +25,6 @@ class DetailPage extends React.Component {
     })
   }
 
-  addComment = (e) => {
-    e.preventDefault();
-    console.log(this.state.newComment)
-    axios.patch(`http://localhost:7000/api/posts/${this.props.match.params.id}`,
-      {
-        comment: this.state.newComment
-      }
-    )
-    .then(response => {
-      console.log(response)
-        this.setState({
-          newComment: '',
-        })
-    })
-    .catch(err => console.log(err))
-    let copyArray = [...this.state.addYourSay]
-    copyArray.push(this.state.newComment)
-    this.setState({addYourSay: copyArray})
-    }
-
-
-  handleChange = (e) => {
-    this.setState({newComment: e.target.value})
-  }
 
   render() {
     const {isLoading, data, newComment} = this.state;

@@ -1,23 +1,22 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { Button, table, thead, tbody, columns, column} from "react-bulma-components/full"
 import 'react-bulma-components/dist/react-bulma-components.min.css'
 
 class ListPage extends React.Component {
   state = {
-    tasks: [],
+    movies: [],
   }
 
-  // componentDidMount () {
-  //   fetch('http://localhost:7000/api/posts')
-  //   .then(res => res.json())
-  //   .then(tasks => this.setState({tasks}, () => console.log('Tasks Fetched',
-  //     tasks)));
-  // }
   componentDidMount () {
-  axios.get('http://localhost:7000/api/posts').then(response => {
+  axios.get('https://cdn-discover.hooq.tv/v1.2/discover/feed?region=ID&page=1&perPage=20').then(response => {
+    // console.log(response.data.data[0]);
+    let words = [...response.data.data];
+    let finalData = words.filter(word => word.type === "Multi-Title-Manual-Curation");
+    console.log(finalData[0]);
     this.setState({
-      tasks: response.data
+      movies: finalData
     })
   })
   .catch(error => {
@@ -44,23 +43,27 @@ class ListPage extends React.Component {
                             <table className="table is-mobile">
                               <thead>
                                 <tr>
-                                  <th><abbr title="image" className="is-3">Poster</abbr></th>
-                                  <th><abbr title="title">Title</abbr></th>
-                                  <th><abbr title="date">Date Held</abbr></th>
-                                  <th><abbr title="content">Content</abbr></th>
-                                  <th><abbr title="action">Action</abbr></th>
+                                  <th><abbr title="image" className="is-3">Row Name</abbr></th>
+                                  <th><abbr title="title">Image</abbr></th>
+                                  <th><abbr title="date">Title</abbr></th>
                                 </tr>
                               </thead>
                               <tbody>
-                                {this.state.tasks.map((task) => (
-                                  <tr className="key={task.id}">
-                                    <td><img width="200" height="200" src={ task.image } /></td>
-                                    <td><h4>{ task.title }</h4></td>
-                                    <td>{ task.date }</td>
-                                    <td>{ task.content }</td>
-                                    <td><button onClick={() => {this.addComment(task.id)} } className="button is-info">Comment</button></td>
-                                  </tr>
-                                ))}
+                              {this.state.movies.map((movie) => (
+                                <tr className="key={task.id}">
+                                  <td>{ movie.row_name }</td>
+                                  <Link to={`/pages/viewpage/${movie.row_id}`}>
+                                    <figure className="image is-200x200">
+                                      <td><img width="200" height="200" src={ movie.data.images } /></td>
+                                    </figure>
+                                  </Link>
+                                  {/*<td><img width="200" height="200" src={ movie.image } /></td>*/}
+                                  <td><h4>{ movie.type }</h4></td>
+                                  {/*<td><h4>{ movie.data.title }</h4></td>*/}
+
+                                  {/*<td><button onClick={() => {this.addComment(movie.id)} } className="button is-info">Comment</button></td>*/}
+                                </tr>
+                              ))}
                               </tbody>
                             </table>
                            </div>
