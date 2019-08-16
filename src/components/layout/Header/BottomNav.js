@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { Button, Columns, Navbar, Header} from "react-bulma-components/full"
 import 'react-bulma-components/dist/react-bulma-components.min.css'
 
-function BottomNav() {
+const BottomNav = () => {
 
   return (
       <div className="container topNav">
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="https://www.letsumai.com/for-restaurants">
-                  <span className=" is-size-4">SoCAR Message Board</span>
+                  <span className=" is-size-4">Bjak My Sdn Bhd</span>
                 </a>
 
                 <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

@@ -5,7 +5,7 @@ import umaifcbk from '../../../img/fcbk.svg'
 import umaiinsta from '../../../img/insta.svg'
 import umailinked from '../../../img/linked.svg'
 
-function BottomFooter() {
+const BottomFooter = () => {
 
   return (
       <footer className="section footer-btm">
@@ -13,7 +13,7 @@ function BottomFooter() {
               <div className="columns">
                 <div className="column is-2">
                   <div className="firstFooter">
-                      <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">SoCAR</h1>
+                      <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">Bjak </h1>
                       <div className="content">
                         <div className="subtitle is-5 has-text-grey">
                           <div className="has-text-left has-text-weight-light">
@@ -26,14 +26,14 @@ function BottomFooter() {
                 </div>
                 <div className="column is-3">
                     <div className="firstFooter">
-                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">SoCAR Malaysia</h1>
+                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">Bjak HQ</h1>
                         <div className="content">
                             <div className="subtitle is-5 has-text-white">
                                 <div className="has-text-left has-text-weight-light has-text-grey">
-                                    <p className="has-text-left">info@socar.com</p>
+                                    <p className="has-text-left">info@bjak.com</p>
                                     <p className="has-text-left">
                                       04-01 UOA Tower A<br />
-                                      Bangsa South<br />
+                                      Kota Damanasara<br />
                                       Kuala Lumpur 049704
                                     </p>
                                 </div>
@@ -43,15 +43,15 @@ function BottomFooter() {
                 </div>
                 <div className="column is-4">
                     <div className="firstFooter">
-                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">SoCAR Singapore</h1>
+                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">Bjak Penang</h1>
                         <div className="content">
                             <div className="subtitle is-5 has-text-white">
                                 <div className="has-text-left has-text-weight-light has-text-grey">
-                                    <p className="has-text-left">info@socar.com</p>
+                                    <p className="has-text-left">info@bjak.com</p>
                                     <p className="has-text-left">
-                                      A-21-06 Summer Suites,<br />
-                                      8 Cecil Street <br />
-                                      Singapore 50250
+                                      A-21-06 IBM Tower,<br />
+                                      8 Georgetown <br />
+                                      Penang 50250
                                     </p>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@ function BottomFooter() {
                     <div className="content">
                         <div className="subtitle is-5 has-text-white">
                             <p className="has-text-right has-text-weight-light has-text-grey">
-                                <a href="#" className="has-text-right has-text-grey">© 2019 SoCAR. All Rights Reserved</a>
+                                <a href="#" className="has-text-right has-text-grey">© 2019 Bjak. All Rights Reserved</a>
                             </p>
                         </div>
                     </div>

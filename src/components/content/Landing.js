@@ -3,7 +3,7 @@ import { Button, Columns, Navbar, Header} from "react-bulma-components/full"
 import 'react-bulma-components/dist/react-bulma-components.min.css'
 
 
-function Landing() {
+const Landing = () => {
 
   return (
     <>
@@ -14,8 +14,7 @@ function Landing() {
                     <br />
                     <br />
                     <br />
-                    <h2 className="title is-3 has-text-left has-text-weight-light" id="mainBlack">Use Bulletin Boards to Reinforce Information<br />
-                        & Propel Awareness.
+                    <h2 className="title is-3 has-text-left has-text-weight-light" id="mainBlack">When you’re choosing car insurance it’s important you have the facts <br />so you can make an informed decision.
                     </h2>
                   </div>
                   <div className="content" id="landingForm">

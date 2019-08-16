@@ -19,21 +19,20 @@ const NoticeNav = () => {
                     <div className="column is-one-quarter">
                       <div className="field">
                         <div className="control">
-                          <Link to="/" className="button is-large is-info is-fullwidth">ListPage</Link>
+                          <Link to="/" className="button is-large is-info is-fullwidth">List of Movies</Link>
                         </div>
                       </div>
                     </div>
                     <div className="column is-one-quarter">
                       <div className="field">
                         <div className="control">
-                          <Link to="/pages/detail" className="button is-large is-info is-fullwidth">DetailPage</Link>
+                          <Link to="/pages/detail" className="button is-large is-info is-fullwidth">Detail of Movies</Link>
                         </div>
                       </div>
                     </div>
                     <div className="column is-one-quarter">
                       <div className="field">
                         <div className="control">
-                          <Link to="/pages/new" className="button is-large is-info is-fullwidth">Create New Notice</Link>
                         </div>
                       </div>
                     </div>
