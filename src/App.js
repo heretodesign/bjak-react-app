@@ -19,27 +19,6 @@ class App extends React.Component {
         <NoticeNav />
         <Route exact path="/" component={ListPage} />
         <Route path="/pages/detail/:id" component={DetailPage} />
-          {
-            show.images
-              .filter(image => image.type === "POSTER")
-              .map(image =>
-                <div className="card">
-                  <div className="card-image">
-                    <figure className="image is-4by3">
-                      <img
-                          src={image.url}
-                          alt="Placeholder image"
-                      />
-                    </figure>
-                  </div>
-                  <div className="card-content">
-                  <p className="heading is-7">
-                    {show.title}
-                  </p>
-                  </div>
-                </div>
-              )
-          }
         <Footer />
       </div>
     );
