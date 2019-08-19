@@ -15,9 +15,14 @@
   background-color: #282c34;
 }
 
+// #columns {
+//  border: 2px solid white;
+// }
+
 #colMain {
   margin-bottom: 100px;
   margin-top: 30px;
+  border: 2px solid white;
 
   @include phone {
     margin-bottom: 40px;
@@ -53,7 +58,8 @@
 #detDescription {
   @include desktop {
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
     font-family: 'Roboto', sans-serif;
   }
 

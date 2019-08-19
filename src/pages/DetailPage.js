@@ -46,7 +46,7 @@ class DetailPage extends React.Component {
                             Synopsis: {data.short_description}
                           </p>
                           <p className="title is-6 has-text-left" id="synopsis">
-                            Genre: {data.tags.label}
+                            Genre: {data.tags[0].tag} / {data.tags[1].tag}
                           </p>
                           <div class="columns">
                             <div class="column is-three-fifths">
