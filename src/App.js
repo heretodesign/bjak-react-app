@@ -8,6 +8,8 @@ import Landing from './components/content/Landing.js'
 import NoticeNav from './components/content/NoticeNav.js'
 import DetailPage from './pages/DetailPage.js'
 import ListPage from './pages/ListPage.js'
+import ViewPage from './pages/ViewPage.js'
+
 
 class App extends React.Component {
 
@@ -18,7 +20,8 @@ class App extends React.Component {
         <Landing />
         <NoticeNav />
         <Route exact path="/" component={ListPage} />
-        <Route path="/pages/detail/:id" component={DetailPage} />
+        <Route path="/pages/viewpage/:id" component={ViewPage} />
+        <Route path="/pages/detailpage/" component={DetailPage} />
         <Footer />
       </div>
     );

@@ -37,7 +37,6 @@ class ListPage extends React.Component {
                             <div className="columns has-text-centered">
                                 <div className="column">
                                     <h1 class="title is-3">{movie.row_name}</h1>
-
                                 </div>
                             </div>
                             <div className="columns has-text-centered">
@@ -50,7 +49,7 @@ class ListPage extends React.Component {
                                                 .map(image =>
                                                     <div className="card">
                                                         <div className="card-image">
-                                                          <Link to={`/pages/viewpage/${movie.row_id}`}>
+                                                          <Link to={`/pages/viewpage/${show.row_id}`}>
                                                             <figure className="image is-4by3">
                                                                 <img
                                                                     src={image.url}

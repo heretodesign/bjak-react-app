@@ -7,19 +7,17 @@ import Flickr from '../Flickr-1.4s-200px.svg'
 
 class DetailPage extends React.Component {
   state = {
-    tasks: [],
     data: [],
     isLoading: true,
     newComment: '',
-    addYourSay: []
   }
 
   componentDidMount () {
-    axios.get(`https://cdn-discover.hooq.tv/v1.2/discover/titles/${this.props.match.params.id}`)
+    axios.get('https://cdn-discover.hooq.tv/v1.2/discover/titles/e6464ce6-42c9-43ae-be23-0dd57f50add1')
     .then(result => {
-      console.log(result.data.images.meta)
+      // console.log(result.data.data)
       this.setState({
-        data: result.data,
+        data: result.data.data,
         isLoading: false,
       })
     })
@@ -28,76 +26,74 @@ class DetailPage extends React.Component {
 
   render() {
     const {isLoading, data, newComment} = this.state;
+    console.log(this.state);
     return (
       <>
-          <section className="section is-paddingless-horizontal">
-              <div className="container grid is-large notification">
-                  <div className="firstsection">
-                    <h1 className="title is-3">Event Details</h1>
-                    <div className="content">
-                      <div className="columns is-mobile">
-                        <div className="column is-three-fifths is-offset-one-fifth">
-                          {
-                            !isLoading ? (
-                              <>
-                                <img src={data.image} alt='dummy' />
-                                 <br />
-                                <h3> Description: {data.content}</h3> <br />
-                                <h3>Date Held: {data.date}</h3>
-                              </>
-                            )
-                            : <>
-                                <p className="text-center"><img className="display:inline;" src={Flickr} alt="Flickr" /></p>
-                              </>
-                            }
-                        </div>
-                      </div>
-                    </div>
-                 </div>
+        <div class="container">
+          <div class="notification" id="notification">
+            <div class="columns is-mobile" id="columns">
+              <div class="column is-three-fifths is-offset-one-fifth" id="colMain">
+                {
+                    !isLoading ? (
+                      <>
+                          <figure class="image is-3by1" id="imgBanner">
+                            <img src={data.images[2].url} />
+                          </figure>
+                          <p className="title is-5 has-text-left" id="title">
+                            Title: {data.title}
+                          </p>
+                          <p className="title is-6  has-text-left" id="synopsis">
+                            Synopsis: {data.short_description}
+                          </p>
+                          <p className="title is-6 has-text-left" id="synopsis">
+                            Genre: {data.tags.label}
+                          </p>
+                          <div class="columns">
+                            <div class="column is-three-fifths">
+                              <p className="title is-6 has-text-left" id="synopsis">
+                                Languages: {data.languages}
+                              </p>
+                            </div>
+                            <div class="column">
+                              <p className="title is-6 has-text-left" id="synopsis">
+                                Audio: {data.audios}
+                              </p>
+                            </div>
+                          </div>
+                          <div class="columns">
+                            <div class="column is-three-fifths">
+                              <p className="title is-6 has-text-left" id="synopsis">
+                                Age Rating: {data.meta.ageRating}
+                              </p>
+                            </div>
+                            <div class="column">
+                              <p className="title is-6 has-text-left" id="synopsis">
+                                Release Year: {data.meta.releaseYear}
+                              </p>
+                            </div>
+                          </div>
+                          <p className="title is-6 has-text-left" id="synopsis">
+                            Seasons: {data.seasons}
+                          </p>
+                          <p className="title is-6 has-text-left" id="synopsis">
+                            Cast: {data.people}
+                          </p>
+                          <p className="title is-6 has-text-left" id="synopsis">
+                            Availability: {data.availability}
+                          </p>
+                          <p className="title is-6  has-text-left" id="detDescription">
+                            Description: {data.description}
+                          </p>
+                      </>
+                    )
+                    : <>
+                    <p className="text-center"><img className="display:inline;" src={Flickr} alt="Flickr" /></p>
+                  </>
+                }
               </div>
-          </section>
-          <section className="section is-paddingless-horizontal">
-            <div className="container grid is-large notification">
-                <div className="firstsection">
-                  <div className="content">
-                    <div className="columns">
-                     <div className="column is-three-fifths is-offset-one-fifth">
-                        {this.state.addYourSay.map((comment) => {
-                          return <h3>{comment}</h3>
-                        })}
-
-                        <h3>Comment: {newComment}</h3>
-                     </div>
-                    </div>
-                    <form id="addComment-form" onSubmit={e => this.addComment(e)}>
-                      <div className="columns">
-                        <div className="column is-three-fifths is-offset-one-fifth">
-                        <h1 className="title is-3"> Add Your Say</h1>
-                          <div className="columns">
-                            <div className="column">
-                              <div className="field">
-                                <div className="control">
-                                  <textarea onChange={e => this.handleChange(e)} className="textarea is-large" type="text" name="comment" value={newComment}  placeholder="Comment" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="columns">
-                            <div className="column">
-                              <div className="field">
-                                <div className="control">
-                                  <button className="button is-large is-info is-fullwidth" type="submit" value="Submit">Add Comment</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-               </div>
             </div>
-          </section>
+          </div>
+        </div>
       </>
     )
   }
