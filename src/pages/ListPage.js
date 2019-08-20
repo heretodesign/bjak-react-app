@@ -49,7 +49,7 @@ class ListPage extends React.Component {
                                                 .map(image =>
                                                     <div className="card">
                                                         <div className="card-image">
-                                                          <Link to={`/pages/viewpage/${show.row_id}`}>
+                                                          <Link to={`/pages/viewpage/${show.id}`}>
                                                             <figure className="image is-4by3">
                                                                 <img
                                                                     src={image.url}

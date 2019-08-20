@@ -8,8 +8,7 @@ import Flickr from '../Flickr-1.4s-200px.svg'
 class DetailPage extends React.Component {
   state = {
     data: [],
-    isLoading: true,
-    newComment: '',
+    isLoading: true
   }
 
   componentDidMount () {
