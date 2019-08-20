@@ -14,7 +14,7 @@ const Landing = () => {
                     <br />
                     <br />
                     <br />
-                    <h2 className="title is-3 has-text-left has-text-weight-light" id="mainBlack">When you’re choosing car insurance it’s important you have the facts <br />so you can make an informed decision.
+                    <h2 className="title is-3 has-text-left has-text-weight-light" id="mainBlack">When you’re choosing car insurance it’s important you have the facts <br />  <br /> so you can make an informed decision.
                     </h2>
                   </div>
                   <div className="content" id="landingForm">
@@ -22,12 +22,12 @@ const Landing = () => {
                       <div className="column is-one-third">
                         <div className="field">
                           <div className="control">
-                            <input className="input is-large" type="text" placeholder="Email Address" />
+                            <input className="input is-large" type="text" id="landBtn" placeholder="Email Address" />
                           </div>
                         </div>
                       </div>
                       <div className="column">
-                        <a className="button is-large is-info is-fullwidth">STAY TUNED</a>
+                        <a className="button is-large is-info is-fullwidth" id="landBtn">STAY TUNED</a>
                       </div>
                       <div className="column"></div>
                     </div>

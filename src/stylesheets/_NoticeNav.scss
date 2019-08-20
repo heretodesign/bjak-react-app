@@ -6,19 +6,20 @@
   @media (max-width: 768px) { @content; }
 }
 
-#mainFooter {
+
+#noticeList {
+
 
   @include phone {
     font-size: 1rem;
+    margin-top: 2px;
   }
 }
 
-#btmFooter {
 
+#companyName {
   @include phone {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    justify-content: center;
-    align-items:center;
+    font-size: 1rem;
+    margin-top: 1px;
   }
 }

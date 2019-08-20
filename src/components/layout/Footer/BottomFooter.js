@@ -13,12 +13,12 @@ const BottomFooter = () => {
               <div className="columns">
                 <div className="column is-2">
                   <div className="firstFooter">
-                      <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">Bjak </h1>
+                      <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark" id="mainFooter">Bjak </h1>
                       <div className="content">
                         <div className="subtitle is-5 has-text-grey">
                           <div className="has-text-left has-text-weight-light">
-                              <p className="has-text-left">About Us</p>
-                              <p className="has-text-left">Careers</p>
+                              <p className="has-text-left" id="mainFooter">About Us</p>
+                              <p className="has-text-left" id="mainFooter">Careers</p>
                           </div>
                         </div>
                       </div>
@@ -26,12 +26,12 @@ const BottomFooter = () => {
                 </div>
                 <div className="column is-3">
                     <div className="firstFooter">
-                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">Bjak HQ</h1>
+                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark" id="mainFooter">Bjak HQ</h1>
                         <div className="content">
                             <div className="subtitle is-5 has-text-white">
                                 <div className="has-text-left has-text-weight-light has-text-grey">
-                                    <p className="has-text-left">info@bjak.com</p>
-                                    <p className="has-text-left">
+                                    <p className="has-text-left" id="mainFooter">info@bjak.com</p>
+                                    <p className="has-text-left" id="mainFooter">
                                       04-01 UOA Tower A<br />
                                       Kota Damanasara<br />
                                       Kuala Lumpur 049704
@@ -43,12 +43,12 @@ const BottomFooter = () => {
                 </div>
                 <div className="column is-4">
                     <div className="firstFooter">
-                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark">Bjak Penang</h1>
+                        <h1 className="title is-4 has-text-weight-bold has-text-white has-text-left has-text-grey-dark" id="mainFooter">Bjak Penang</h1>
                         <div className="content">
                             <div className="subtitle is-5 has-text-white">
                                 <div className="has-text-left has-text-weight-light has-text-grey">
-                                    <p className="has-text-left">info@bjak.com</p>
-                                    <p className="has-text-left">
+                                    <p className="has-text-left" id="mainFooter">info@bjak.com</p>
+                                    <p className="has-text-left" id="mainFooter">
                                       A-21-06 IBM Tower,<br />
                                       8 Georgetown <br />
                                       Penang 50250
@@ -95,7 +95,7 @@ const BottomFooter = () => {
                     <div className="content">
                         <div className="subtitle is-5 has-text-white">
                             <p className="has-text-left has-text-weight-light has-text-grey">
-                                <a href="#" className="has-text-left has-text-grey">Terms & Conditions | Privacy Policy</a>
+                                <a href="#" className="has-text-left has-text-grey" id="mainFooter">Terms & Conditions | Privacy Policy</a>
                             </p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ const BottomFooter = () => {
                     <div className="content">
                         <div className="subtitle is-5 has-text-white">
                             <p className="has-text-right has-text-weight-light has-text-grey">
-                                <a href="#" className="has-text-right has-text-grey">© 2019 Bjak. All Rights Reserved</a>
+                                <a href="#" className="has-text-right has-text-grey" id="mainFooter">© 2019 Bjak. All Rights Reserved</a>
                             </p>
                         </div>
                     </div>

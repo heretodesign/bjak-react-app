@@ -29,14 +29,14 @@ class ListPage extends React.Component {
     render() {
         return (
           <section className="section">
-            <div className="container notification is-primary has-text-centered" style={{ overflowX: "scroll" }}>
-                <h1 className="title is-1">Cool Stuff To Watch</h1>
+            <div className="container notification is-primary has-text-centered" id="containerList" style={{ overflowX: "scroll" }}>
+                <h1 className="title is-2" id="listTitle">Cool Stuff To Watch</h1>
                 {
                     this.state.movies.map(movie =>
                         <>
                             <div className="columns has-text-centered">
                                 <div className="column">
-                                    <h1 class="title is-3">{movie.row_name}</h1>
+                                    <h1 class="title is-3" id="listName">{movie.row_name}</h1>
                                 </div>
                             </div>
                             <div className="columns has-text-centered">

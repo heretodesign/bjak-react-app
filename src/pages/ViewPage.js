@@ -22,9 +22,8 @@ class ViewPage extends React.Component {
     })
   }
 
-
   render() {
-    const {isLoading, content, newComment} = this.state;
+    const { isLoading, content } = this.state;
     return (
       <>
           <section className="section is-paddingless-horizontal">
@@ -32,22 +31,22 @@ class ViewPage extends React.Component {
                   <div className="firstsection">
                     <div className="content">
                       <div className="columns is-mobile">
-                        <div className="column is-three-fifths is-offset-one-fifth has-background-info">
+                        <div className="column is-three-fifths is-offset-one-fifth has-background-grey">
                           {
                             !isLoading ? (
                               <>
-                                <h1 className="title is-3 has-text-white">{content.title}</h1>
-                                <img src={content.images[2].url} alt='dummy' />
+                                <h1 className="title is-3 has-text-white" id="viewTitle">{content.title}</h1>
+                                <img src={content.images[0].url} alt='movie banner' />
                                  <br />
-                                 <p className="subtitle is-5 has-text-white"> Description: {content.short_description}</p>
-                                 <p className="subtitle is-6 has-text-white"> Language: {content.languages}</p>
-                                 <p className="subtitle is-6 has-text-white"> Director: {content.people[0].name}</p>
-                                 <p className="subtitle is-6 has-text-white"> Cast: {content.people[1].name}, {content.people[2].name}, {content.people[3].name}</p>
-                                 <p className="subtitle is-6 has-text-white"> Classification: {content.meta.ageRating} {content.meta.releaseYear}</p>
-                                 <p className="subtitle is-6 has-text-white"> Length: {content.running_time_friendly}</p>
-
-                                 <p className="subtitle is-6 has-text-white"> Description: {content.description}</p>
-                                 <p className="subtitle is-5 has-text-white">Genre: {content.tags[0].label} / {content.tags[1].label}</p>
+                                 <br />
+                                 <p className="subtitle is-5 has-text-white" id="viewPara"> Short Description: {content.short_description}</p>
+                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Language: {content.languages}</p>
+                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Director: {content.people[0].name}</p>
+                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Cast: {content.people[1].name}, {content.people[2].name}, {content.people[3].name}</p>
+                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Classification: {content.meta.ageRating} {content.meta.releaseYear}</p>
+                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Length: {content.running_time_friendly}</p>
+                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Description: {content.description}</p>
+                                 <p className="subtitle is-5 has-text-white" id="viewGenre">Genre: {content.tags[0].label} / {content.tags[1].label}</p>
                               </>
                             )
                             : <>
@@ -60,48 +59,6 @@ class ViewPage extends React.Component {
                  </div>
               </div>
           </section>
-          {/*<section className="section is-paddingless-horizontal">
-            <div className="container grid is-large notification">
-                <div className="firstsection">
-                  <div className="content">
-                    <div className="columns">
-                     <div className="column is-three-fifths is-offset-one-fifth">
-                        {this.state.addYourSay.map((comment) => {
-                          return <h3>{comment}</h3>
-                        })}
-
-                        <h3>Comment: {newComment}</h3>
-                     </div>
-                    </div>
-                    <form id="addComment-form" onSubmit={e => this.addComment(e)}>
-                      <div className="columns">
-                        <div className="column is-three-fifths is-offset-one-fifth">
-                        <h1 className="title is-3"> Add Your Say</h1>
-                          <div className="columns">
-                            <div className="column">
-                              <div className="field">
-                                <div className="control">
-                                  <textarea onChange={e => this.handleChange(e)} className="textarea is-large" type="text" name="comment" value={newComment}  placeholder="Comment" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="columns">
-                            <div className="column">
-                              <div className="field">
-                                <div className="control">
-                                  <button className="button is-large is-info is-fullwidth" type="submit" value="Submit">Add Comment</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-               </div>
-            </div>
-          </section>*/}
       </>
     )
   }

@@ -9,8 +9,6 @@ const NoticeNav = () => {
      <section className="section is-paddingless-horizontal">
         <div className="container grid is-large">
             <div className="firstsection">
-                <h2 className="title is-3 has-text-left has-text-weight-light" id="mainBlack">Bulletin Board App<br />
-                </h2>
                 <div className="content">
                     <p className="subtitle is-6 has-text-left has-text-grey has-text-weight-semibold is-uppercase">This Week Focus</p>
                 </div>
@@ -19,14 +17,14 @@ const NoticeNav = () => {
                     <div className="column is-one-quarter">
                       <div className="field">
                         <div className="control">
-                          <Link to="/" className="button is-large is-info is-fullwidth">List of Movies</Link>
+                          <Link to="/" className="button is-info is-fullwidth" id="noticeList">List of Movies</Link>
                         </div>
                       </div>
                     </div>
                     <div className="column is-one-quarter">
                       <div className="field">
                         <div className="control">
-                          <Link to="/pages/detailpage" className="button is-large is-info is-fullwidth">Detail of Movies</Link>
+                          <Link to="/pages/detailpage" className="button is-info is-fullwidth" id="noticeList">Detail of Movies</Link>
                         </div>
                       </div>
                     </div>
