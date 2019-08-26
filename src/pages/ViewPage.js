@@ -41,12 +41,20 @@ class ViewPage extends React.Component {
                                  <br />
                                  <p className="subtitle is-5 has-text-white" id="viewPara"> Short Description: {content.short_description}</p>
                                  <p className="subtitle is-6 has-text-white" id="viewPara"> Language: {content.languages}</p>
-                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Director: {content.people[0].name}</p>
-                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Cast: {content.people[1].name}, {content.people[2].name}, {content.people[3].name}</p>
+                                 <p className="subtitle is-6 has-text-white" id="viewPara"> Cast:
+                                  {
+                                    content.people && content.people.length && content.people.map((talk, index) => `${talk.name} ${index === content.people.length - 1 ? ' ' : ', '}`)
+                                  }
+                                  </p>
                                  <p className="subtitle is-6 has-text-white" id="viewPara"> Classification: {content.meta.ageRating} {content.meta.releaseYear}</p>
                                  <p className="subtitle is-6 has-text-white" id="viewPara"> Length: {content.running_time_friendly}</p>
                                  <p className="subtitle is-6 has-text-white" id="viewPara"> Description: {content.description}</p>
-                                 <p className="subtitle is-5 has-text-white" id="viewGenre">Genre: {content.tags[0].label} / {content.tags[1].label}</p>
+                                 <p className="subtitle is-5 has-text-white" id="viewGenre">
+                                 {
+                                   content.tags && content.tags.length && content.tags.map((tag, index) => `${tag.label} ${index === content.tags.length - 1 ? '' : ' / '}`)
+                                 }
+                                 </p>
+                                 {/* <p className="subtitle is-5 has-text-white" id="viewGenre">Genre: {content.tags[0].label} / {content.tags[1].label}</p> */}
                               </>
                             )
                             : <>

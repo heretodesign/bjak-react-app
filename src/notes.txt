@@ -1,0 +1,22 @@
+{/* <p className="subtitle is-6 has-text-white" id="viewPara">
+  {
+    content.people && content.people.length && content.people.map((peopl, index) => `${peopl.label} ${index === content.peopl.length - 1 ? '' : ' / '}`)
+  }
+</p>*/}
+{/*}<p className="subtitle is-6 has-text-white" id="viewPara"> Cast: {content.people[1].name}, {content.people[2].name}, {content.people[3].name}</p>*/}
+
+<p className="subtitle is-6 has-text-white" id="viewPara">
+  {
+    content.people && content.people.length && content.people.map((stars, index) => `${stars.role} ${index === content.stars.length - 1 ? '' : ' / '}`)
+  }
+</p>
+
+<p className="subtitle is-6 has-text-white" id="viewPara"> Classification: {content.meta.ageRating} {content.meta.releaseYear}</p>
+<p className="subtitle is-6 has-text-white" id="viewPara"> Length: {content.running_time_friendly}</p>
+<p className="subtitle is-6 has-text-white" id="viewPara"> Description: {content.description}</p>
+<p className="subtitle is-5 has-text-white" id="viewGenre">
+{
+  content.tags && content.tags.length && content.tags.map((tag, index) => `${tag.label} ${index === content.tags.length - 1 ? '' : ' / '}`)
+}
+</p>
+{/* <p className="subtitle is-5 has-text-white" id="viewGenre">Genre: {content.tags[0].label} / {content.tags[1].label}</p> */}
